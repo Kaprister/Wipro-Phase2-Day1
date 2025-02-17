@@ -1,4 +1,7 @@
 package com.phase2.wiproDay1.Repository;
 
-public class DepartmentRepo {
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface DepartmentRepo {
 }

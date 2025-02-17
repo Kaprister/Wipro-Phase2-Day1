@@ -1,5 +1,6 @@
 package com.phase2.wiproDay1.Model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +19,7 @@ public class College {
     private Long id;
 
     @Column(nullable = false, unique = true)
+    @JsonProperty("name")
     private String name;
 
     @OneToMany(mappedBy = "college", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
