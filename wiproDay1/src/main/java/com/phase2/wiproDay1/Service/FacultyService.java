@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @Service
 public class FacultyService {
+
     @Autowired
     private FacultyRepo facultyRepository;
 
@@ -34,6 +35,7 @@ public class FacultyService {
         }
         return null;
     }
+
 
     // Delete Faculty by
     public boolean deleteFaculty(Long id) {
