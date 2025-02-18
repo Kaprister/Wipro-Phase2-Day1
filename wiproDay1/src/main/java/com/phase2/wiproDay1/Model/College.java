@@ -25,4 +25,36 @@ public class College {
     @OneToMany(mappedBy = "college", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Department> departments;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public List<Department> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(List<Department> departments) {
+        this.departments = departments;
+    }
+
+    @Override
+    public String toString() {
+        return "College{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", departments=" + departments +
+                '}';
+    }
 }

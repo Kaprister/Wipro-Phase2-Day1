@@ -6,6 +6,7 @@ import com.phase2.wiproDay1.Service.CollegeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,8 +19,8 @@ public class CollegeController {
     CollegeService collegeService;
 
     @GetMapping("/hello")
-    public String sayHello() {
-        return "Hello, Swagger!";
+    public ResponseEntity<String> sayHello() {
+        return new ResponseEntity<>("Hello, Swagger!", HttpStatus.OK);
     }
 
     @PostMapping()
@@ -28,7 +29,7 @@ public class CollegeController {
         return new ResponseEntity<>(collegeAdded, HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping()
     public ResponseEntity<List<College>> getAllCollege(){
         List<College> allColleges = collegeService.getAllCollege();
         return new ResponseEntity<>(allColleges, HttpStatus.OK);
