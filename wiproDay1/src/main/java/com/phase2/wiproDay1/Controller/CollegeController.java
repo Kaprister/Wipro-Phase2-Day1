@@ -3,6 +3,7 @@ package com.phase2.wiproDay1.Controller;
 
 import com.phase2.wiproDay1.Model.College;
 import com.phase2.wiproDay1.Service.CollegeService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/college")
+//@RequiredArgsConstructor
 public class CollegeController {
 
     @Autowired
